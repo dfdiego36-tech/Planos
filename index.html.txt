@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta Pro - Escolha seu Plano</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030305;
+            color: #ffffff;
+            background-image: radial-gradient(circle at 50% 0%, #1e103c 0%, transparent 40%), 
+                              radial-gradient(circle at 50% 100%, #100826 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        /* Cartão Gold */
+        .card-gold {
+            background-color: #09090c;
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            box-shadow: 0 0 30px -10px rgba(234, 179, 8, 0.15);
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+            box-shadow: 0 0 20px rgba(234, 179, 8, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover { box-shadow: 0 0 30px rgba(234, 179, 8, 0.5); transform: scale(1.02); }
+
+        /* Cartão Diamond */
+        .card-diamond {
+            background-color: #09090c;
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            box-shadow: 0 0 30px -10px rgba(59, 130, 246, 0.2);
+        }
+        .btn-diamond {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-diamond:hover { box-shadow: 0 0 30px rgba(59, 130, 246, 0.5); transform: scale(1.02); }
+
+        /* Cartão Premium */
+        .card-premium {
+            background-color: #09090c;
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            box-shadow: 0 0 40px -10px rgba(168, 85, 247, 0.25);
+        }
+        .btn-premium {
+            background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-premium:hover { box-shadow: 0 0 30px rgba(168, 85, 247, 0.6); transform: scale(1.02); }
+
+        /* Ícones da lista */
+        .check-icon { color: #22c55e; }
+        .cross-icon { color: #ef4444; opacity: 0.5; }
+        .item-disabled { opacity: 0.5; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center overflow-x-hidden pb-12">
+
+    <!-- Faixa de Alerta Superior (Verde) -->
+    <div class="w-full bg-[#15803d] text-center py-2 px-4 shadow-lg z-50 border-b border-green-500/30">
+        <div class="max-w-2xl mx-auto flex flex-col items-center justify-center">
+            <p class="font-bold text-xs md:text-sm text-white flex items-center justify-center gap-2">
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-green-400"></span>
+                </span>
+                Sua identidade está preservada!
+            </p>
+            <p class="text-[10px] md:text-xs text-green-100 mt-0.5">Conexão Segura - Firewall ativo V3.2.1</p>
+        </div>
+    </div>
+
+    <!-- Container Principal -->
+    <main class="w-full max-w-lg px-4 pt-8 flex flex-col items-center gap-8 relative z-10">
+
+        <!-- Logo e Cabeçalho -->
+        <div class="flex flex-col items-center gap-4 w-full text-center">
+            <div class="flex flex-col items-center">
+                <img src="imagem produto 2.png" alt="Insta Pro Logo" class="w-12 h-12 rounded-xl mb-2 shadow-lg object-cover">
+                <h1 class="text-xl font-black tracking-[0.2em] text-white">INSTA <span class="text-purple-500">PRO</span></h1>
+                <div class="w-12 h-1 bg-purple-500 mt-2 rounded-full"></div>
+            </div>
+
+            <h2 class="text-2xl font-bold text-white mt-2 flex items-center gap-2">
+                <span class="text-purple-500">⚡</span> Escolha seu Plano
+            </h2>
+            <p class="text-gray-400 text-xs md:text-sm max-w-[90%] leading-relaxed">
+                Agora que sua conta já está com o <strong class="text-purple-400">firewall ativo</strong> e sua <strong class="text-gray-200">identidade preservada</strong>, selecione com qual plano você deseja prosseguir.
+            </p>
+        </div>
+
+        <!-- PLano Gold -->
+        <div class="w-full card-gold rounded-3xl p-6 relative flex flex-col items-center">
+            <h3 class="text-xl font-bold text-yellow-500 mb-1">Gold</h3>
+            <span class="text-gray-500 text-[10px] uppercase tracking-widest mb-4">Plano</span>
+
+            <div class="text-4xl font-black text-yellow-500 mb-6">
+                R$67,00
+            </div>
+
+            <ul class="w-full flex flex-col gap-3 mb-6 text-[13px] md:text-sm">
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-300">Acesso Básico (Válido por 1 mês)</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-300">Busca de apenas 1 perfil</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-300">Monitoramento apenas do Insta</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-300">Suporte em horário comercial pelo e-mail</span></li>
+                <li class="flex items-start gap-2 item-disabled"><span class="cross-icon font-bold">✕</span> <span class="text-gray-500">Localização em tempo Real</span></li>
+                <li class="flex items-start gap-2 item-disabled"><span class="cross-icon font-bold">✕</span> <span class="text-gray-500">Galeria de Fotos (incluindo fotos apagadas)</span></li>
+                <li class="flex items-start gap-2 item-disabled"><span class="cross-icon font-bold">✕</span> <span class="text-gray-500">BRINDE: Espião Completo do Facebook</span></li>
+                <li class="flex items-start gap-2 item-disabled"><span class="cross-icon font-bold">✕</span> <span class="text-gray-500">BRINDE: Espião Completo do Messenger</span></li>
+            </ul>
+
+            <a href="LINK_GOLD_AQUI" class="w-full btn-gold text-black rounded-2xl py-3.5 flex flex-col items-center justify-center cursor-pointer no-underline">
+                <span class="font-bold text-[15px]">Selecionar Plano Básico</span>
+                <span class="text-[10px] font-medium opacity-80">824 vagas • Pagamento único</span>
+            </a>
+        </div>
+
+        <!-- Plano Diamond -->
+        <div class="w-full card-diamond rounded-3xl p-6 relative flex flex-col items-center mt-4">
+            <!-- Badge -->
+            <div class="absolute -top-3 bg-blue-500 text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                Mais Vendido
+            </div>
+
+            <h3 class="text-xl font-bold text-blue-500 mb-1">Diamond</h3>
+            <span class="text-gray-500 text-[10px] uppercase tracking-widest mb-2">Plano</span>
+
+            <div class="text-gray-500 line-through text-xs mb-1">R$ 197,00</div>
+            <div class="text-4xl font-black text-blue-500 mb-6">
+                R$97,00
+            </div>
+
+            <ul class="w-full flex flex-col gap-3 mb-6 text-[13px] md:text-sm">
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-200">Acesso Premium (Válido por 6 meses)</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-200">Busca de 5 perfis</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-200 font-medium">Monitoramento Completo</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-200">Suporte 24h pelo WhatsApp</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-200">Localização em tempo Real</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-200">Galeria de Fotos (incluindo fotos apagadas)</span></li>
+                <li class="flex items-start gap-2 item-disabled"><span class="cross-icon font-bold">✕</span> <span class="text-gray-500">BRINDE: Espião Completo do Facebook</span></li>
+                <li class="flex items-start gap-2 item-disabled"><span class="cross-icon font-bold">✕</span> <span class="text-gray-500">BRINDE: Espião Completo do Messenger</span></li>
+            </ul>
+
+            <a href="LINK_DIAMOND_AQUI" class="w-full btn-diamond text-white rounded-2xl py-3.5 flex flex-col items-center justify-center cursor-pointer no-underline">
+                <span class="font-bold text-[15px]">Selecionar Mais Vendido</span>
+                <span class="text-[10px] font-medium opacity-80">71 vagas • Pagamento único</span>
+            </a>
+        </div>
+
+        <!-- Plano Premium -->
+        <div class="w-full card-premium rounded-3xl p-6 relative flex flex-col items-center mt-4">
+            <!-- Badge -->
+            <div class="absolute -top-3 bg-purple-500 text-white text-[10px] font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                Melhor Custo Benefício
+            </div>
+
+            <h3 class="text-xl font-bold text-purple-400 mb-1">Premium</h3>
+            <span class="text-gray-500 text-[10px] uppercase tracking-widest mb-2">Plano</span>
+
+            <div class="text-gray-500 line-through text-xs mb-1">R$ 247,00</div>
+            <div class="text-4xl font-black text-purple-400 mb-6 flex items-start gap-1">
+                R$127,00
+            </div>
+
+            <ul class="w-full flex flex-col gap-3 mb-6 text-[13px] md:text-sm">
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-white font-bold">Acesso Vitalício a Todos os Apps</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-white font-bold">Busca de Perfis ILIMITADOS</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-200">Monitoramento Completo</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-200">Suporte 24h pelo WhatsApp</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-200">Localização em Tempo Real</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-gray-200">Galeria de Fotos (incluindo fotos apagadas)</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-purple-400 font-semibold">BRINDE: Espião Completo do Facebook</span></li>
+                <li class="flex items-start gap-2"><span class="check-icon font-bold">✓</span> <span class="text-purple-400 font-semibold">BRINDE: Espião Completo do Messenger</span></li>
+            </ul>
+
+            <a href="LINK_PREMIUM_AQUI" class="w-full btn-premium text-white rounded-2xl py-3.5 flex flex-col items-center justify-center cursor-pointer no-underline">
+                <span class="font-bold text-[15px]">Selecionar Custo Benefício</span>
+                <span class="text-[10px] font-medium opacity-80">119 vagas • Pagamento único</span>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-4 text-center text-xs text-gray-600 flex flex-col items-center gap-3 w-full pb-8">
+            <div class="flex items-center gap-2 opacity-50">
+                <img src="imagem produto 2.png" alt="Insta Pro Logo" class="w-5 h-5 rounded-md object-cover">
+                <span class="font-bold tracking-widest text-[10px]">INSTA PRO</span>
+            </div>
+            <p>© 2026 Insta Pro — Todos os direitos reservados.®</p>
+            <div class="flex gap-4 mt-1 font-medium">
+                <a href="#" class="hover:text-gray-400 transition-colors">Termos de Uso</a>
+                <a href="#" class="hover:text-gray-400 transition-colors">Política de Privacidade</a>
+            </div>
+        </footer>
+
+    </main>
+</body>
+</html>
